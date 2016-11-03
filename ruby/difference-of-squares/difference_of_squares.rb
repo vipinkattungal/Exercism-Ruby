@@ -1,14 +1,18 @@
+module BookKeeping
+  VERSION = 3
+end
 class Squares
-  attr_reader :var
+  attr_reader :n
   def initialize(a)
-    @var = a
+    @n = a
   end
-def self.square_of_sum
-squre = (0..var).each do|x|+(x**2)
-sqre2 = (0..var).each do|x|+(x)
-b = squre - sqre2
-b
+def square_of_sum
+((n*(n+1))/2)**2
 end
+def sum_of_squares
+(n*(n+1)*((2*n)+1))/6
 end
+def difference
+(((n*(n+1))/2)**2)-((n*(n+1)*((2*n)+1))/6)
 end
 end
