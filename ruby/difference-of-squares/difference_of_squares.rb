@@ -1,6 +1,6 @@
 module BookKeeping
   VERSION = 3
-end
+end 
 class Squares
   attr_reader :n
   def initialize(a)
