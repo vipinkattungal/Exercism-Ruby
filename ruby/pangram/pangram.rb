@@ -1,6 +1,9 @@
+module BookKeeping
+  VERSION = 2
+end
 class Pangram
 def self.is_pangram?(str)
-s =('a'..'z').to_s
- str.downcase.split("").each{|x|x.include? s}.uniq.sort == s
+s = str.downcase
+x = ('a'..'z').all? { |e|s.include?(e)}
 end
 end
