@@ -3,15 +3,16 @@ class Sieve
     @max=max
   end
 def primes
-prime = (0..@max).to_a
-prime[0]=prime[1]=[]
-prime.each do p
-  next unless p
-  break if p*p>max
-  count +=1
-  (p*p).step(max,p){|m|prime[m]=[]}  #square replacing
-  puts "#{max}in #{count}"
-prime.compact
+a=[]
+return a if @max<2
+prime = (2..@max).to_a
+a<<prime[0]
+return a if @max==2
+
+y = prime.delete_if{|x|x=x%(prime[0])==0}
+prime<<y
+a<<prime[0]
+end
 end
 end
 end
