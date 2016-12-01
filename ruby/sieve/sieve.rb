@@ -9,7 +9,7 @@ prime = (2..@max).to_a
 a<<prime[0]
 return a if @max==2
 
-y = prime.delete_if{|x|x=x%(prime[0])==0}
+y = prime.delete_if{|x|x=x%(prime[0])==0}   #array replacing
 prime<<y
 a<<prime[0]
 end
